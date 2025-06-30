@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from "rxjs";
-import {PhotoCarouselItem} from "../components/data/photo-carousel-item.data";
+import {PhotoCarouselItem} from "../data/photo-carousel-item.data";
 
 
 @Injectable({

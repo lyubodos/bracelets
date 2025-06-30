@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,20 @@ import {MenuItem} from "primeng/api";
 export class AppHeaderComponent implements OnInit {
   public items: MenuItem[] | undefined;
 
+  constructor(private router: Router) {
+  }
+
   public ngOnInit(): void {
     this.items = [
       {
         label: 'Home',
-        icon: 'pi pi-home'
+        icon: 'pi pi-home',
+        command: () => this.router.navigate(['/home'])
       },
       {
         label: 'About',
-        icon: 'pi pi-star'
+        icon: 'pi pi-star',
+        command: () => this.router.navigate(['/about'])
       },
       {
         label: 'Products',
@@ -53,7 +59,8 @@ export class AppHeaderComponent implements OnInit {
       },
       {
         label: 'Contacts',
-        icon: 'pi pi-envelope'
+        icon: 'pi pi-envelope',
+        command: () => this.router.navigate(['/contacts'])
       }
     ]
   }

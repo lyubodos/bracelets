@@ -1,6 +1,6 @@
 import {Component, model, OnInit} from '@angular/core';
 import {PhotoFetcherService} from "../../services/photo-fetcher.service";
-import {PhotoCarouselItem} from "../data/photo-carousel-item.data";
+import {PhotoCarouselItem} from "../../data/photo-carousel-item.data";
 
 @Component({
   selector: 'app-main',

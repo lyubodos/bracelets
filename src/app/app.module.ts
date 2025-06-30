@@ -4,7 +4,6 @@ import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MenubarModule} from "primeng/menubar";
 import {ButtonModule} from "primeng/button";
-import {AnimateOnScrollBasicDemo} from "./components/animateonscrollbasicdemo/animateonscrollbasicdemo.component";
 import {AnimateOnScrollModule} from "primeng/animateonscroll";
 import {AvatarModule} from "primeng/avatar";
 import {AppHeaderComponent} from "./components/app-header/app-header.component";
@@ -13,6 +12,8 @@ import {ImageModule} from "primeng/image";
 import {GalleriaModule} from "primeng/galleria";
 import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {AppRoutingModule} from "./app-routing.module";
+import {ContactsComponent} from "./components/contacts/contacts.component";
+import {AboutUsComponent} from "./components/about-us/about-us.component";
 
 
 @NgModule({
@@ -27,17 +28,16 @@ import {AppRoutingModule} from "./app-routing.module";
     ImageModule,
     GalleriaModule
   ],
-    declarations: [
-        AppComponent,
-        AppHeaderComponent,
-        MainComponent,
-        AnimateOnScrollBasicDemo,
-        AppFooterComponent
-    ],
-  providers: [
+  declarations: [
+    AppComponent,
+    AppHeaderComponent,
+    MainComponent,
+    AboutUsComponent,
+    ContactsComponent,
+    AppFooterComponent
   ],
-  exports: [
-  ],
+  providers: [],
+  exports: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
