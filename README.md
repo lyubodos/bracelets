@@ -41,3 +41,33 @@
 
 ## 📁 Project Structure
 
+bracelet-factory/
+├── frontend/ # Angular app
+│ ├── src/
+│ └── ...
+├── backend/ # Spring Boot REST API
+│ ├── src/
+│ └── ...
+├── README.md
+└── ...
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ & Angular CLI
+- Java 17+
+- MongoDB instance (local or hosted via MongoDB Atlas)
+- GCP account (for deployment)
+
+---
+
+### 🧪 Local Development
+
+#### Frontend (Angular)
+```bash
+cd frontend
+npm install
+ng serve
