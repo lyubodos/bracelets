@@ -1,25 +1,26 @@
-import {Component, OnInit} from "@angular/core";
-import { MenuItem } from 'primeng/api';
+import {Component, OnInit} from '@angular/core';
+import {MenuItem} from "primeng/api";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-header',
+  templateUrl: './app-header.component.html',
+  styleUrl: './app-header.component.scss'
 })
-export class AppComponent implements OnInit{
-   public items: MenuItem[] | undefined;
+export class AppHeaderComponent implements OnInit {
+  public items: MenuItem[] | undefined;
 
   public ngOnInit(): void {
     this.items = [
       {
-        label: 'Home'
+        label: 'Home',
+        icon: 'pi pi-home'
       },
       {
-        label: 'Features',
+        label: 'About',
         icon: 'pi pi-star'
       },
       {
-        label: 'Projects',
+        label: 'Products',
         icon: 'pi pi-search',
         items: [
           {
@@ -51,7 +52,7 @@ export class AppComponent implements OnInit{
         ]
       },
       {
-        label: 'Contact',
+        label: 'Contacts',
         icon: 'pi pi-envelope'
       }
     ]

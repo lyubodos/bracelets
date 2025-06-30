@@ -1,0 +1,19 @@
+@import '../../../assets/base/global';
+@import '../../../assets/modules/page-section';
+
+.main-section{
+  padding-top: 70px;
+}
+
+.middle-hero {
+  text-align: center;
+}
+
+.last-hero {
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {}
+}
