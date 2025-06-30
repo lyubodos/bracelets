@@ -14,6 +14,8 @@ import {AppFooterComponent} from "./components/app-footer/app-footer.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {ContactsComponent} from "./components/contacts/contacts.component";
 import {AboutUsComponent} from "./components/about-us/about-us.component";
+import {CarouselModule} from "primeng/carousel";
+import {TagModule} from "primeng/tag";
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import {AboutUsComponent} from "./components/about-us/about-us.component";
     AnimateOnScrollModule,
     AvatarModule,
     ImageModule,
-    GalleriaModule
+    GalleriaModule,
+    CarouselModule,
+    TagModule
   ],
   declarations: [
     AppComponent,

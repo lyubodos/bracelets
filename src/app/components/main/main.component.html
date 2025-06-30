@@ -1,52 +1,57 @@
 <section class="main-section">
 
   <!-- Section 1: Why Choose Us -->
-<div class="p-grid p-justify-center p-align-center p-py-5 p-mx-2">
-  <div class="middle-hero page-section">
-    <h2>Why Choose Our Bracelets?</h2>
-    <p>
-      Our handmade bracelets are crafted with love, using high-quality materials
-      and designed to reflect elegance and personality. With eco-friendly
-      packaging and personalized service, we bring more than just jewelry —
-      we bring connection.
-    </p>
-    <div class="card mx-auto p-4 border border-gray-300 max-w-[700px]">
-<!--      <p-galleria-->
-<!--        [value]="images"-->
-<!--        [responsiveOptions]="responsiveOptions"-->
-<!--        [containerStyle]="{ 'max-width': '640px' }"-->
-<!--        [numVisible]="5"-->
-<!--        [circular]="true"-->
-<!--        [showItemNavigators]="true"-->
-<!--        [showThumbnails]="true">-->
-
-<!--        <ng-template #item let-item>-->
-<!--          <img [src]="item.itemImageSrc" alt="Image" style="width:100%" />-->
-<!--        </ng-template>-->
-
-<!--        <ng-template #thumbnail let-item>-->
-<!--          <img [src]="item.thumbnailImageSrc" alt="Thumbnail" />-->
-<!--        </ng-template>-->
-
-<!--      </p-galleria>-->
-    </div>
-    <div class="p-col-12 p-md-6">
-      <p-image src="./assets/images/bracelets-showcase.jpeg" alt="Image" width="250" />
-      <p-image src="./assets/images/woman_hand.jpeg" alt="Image" width="250" />
+  <div class="p-grid p-justify-center p-align-center p-py-5 p-mx-2">
+    <div class="middle-hero page-section">
+      <h2>Why Choose Our Bracelets?</h2>
+      <p>
+        Our handmade bracelets are crafted with love, using high-quality materials
+        and designed to reflect elegance and personality. With eco-friendly
+        packaging and personalized service, we bring more than just jewelry —
+        we bring connection.
+      </p>
     </div>
   </div>
-</div>
-
-<!-- Section 2: Bracelet Types -->
-<div class="last-hero p-grid p-py-5 p-mx-2">
-  <div class="p-col-12">
-    <h2 class="last-hero__title">Types of Bracelets We Offer</h2>
-    <ul class="last-hero__list">
-      <li>Beaded Bracelets – Vibrant and colorful for daily wear</li>
-      <li>Leather Bracelets – Classic and bold for a timeless look</li>
-      <li>Charm Bracelets – Customizable and meaningful gifts</li>
-      <li>Couple Bracelets – For you and your loved one</li>
-    </ul>
+  <div class="card">
+    <p-carousel [value]="products" [numVisible]="3" [numScroll]="2" [circular]="false"
+                [responsiveOptions]="responsiveOptions">
+      <ng-template pTemplate="item" let-product>
+        <div class="border border-surface rounded-border m-2 p-4">
+          <div class="mb-4">
+            <div class="relative mx-auto">
+              <img src="./assets/images/bracelets-showcase.jpeg"
+                   [alt]="product.name"
+                   class="w-full rounded-border"/>
+              <p-tag [value]="product.inventoryStatus"
+                     styleClass="dark:!bg-surface-900"
+                     [severity]="getSeverity(product.inventoryStatus)"
+                     class="absolute"
+                     [ngStyle]="{ 'left.px': 5, 'top.px': 5 }"/>
+            </div>
+          </div>
+          <div class="mb-4 font-medium">{{ product.name }}</div>
+          <div class="flex justify-between items-center">
+            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
+            <span>
+            <p-button icon="pi pi-heart" severity="secondary" [outlined]="true"/>
+            <p-button icon="pi pi-shopping-cart" styleClass="ml-2"/>
+          </span>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
   </div>
-</div>
+
+  <!-- Section 2: Bracelet Types -->
+  <div class="last-hero p-grid p-py-5 p-mx-2">
+    <div class="p-col-12">
+      <h2 class="last-hero__title">Types of Bracelets We Offer</h2>
+      <ul class="last-hero__list">
+        <li>Beaded Bracelets – Vibrant and colorful for daily wear</li>
+        <li>Leather Bracelets – Classic and bold for a timeless look</li>
+        <li>Charm Bracelets – Customizable and meaningful gifts</li>
+        <li>Couple Bracelets – For you and your loved one</li>
+      </ul>
+    </div>
+  </div>
 </section>
